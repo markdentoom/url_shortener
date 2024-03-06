@@ -1,40 +1,40 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-import { Button, Form } from "react-bootstrap";
-import { addNote } from "./NotesActions";
+import React, { Component } from "react"
+import PropTypes from "prop-types"
+import { connect } from "react-redux"
+import { withRouter } from "react-router-dom"
+import { Button, Form } from "react-bootstrap"
+import { addNote } from "./NotesActions"
 
 class AddNote extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      content: ""
-    };
+      content: "",
+    }
   }
-  onChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+  onChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value })
+  }
 
   onAddClick = () => {
     const note = {
-      content: this.state.content
-    };
-    this.props.addNote(note);
-  };
+      content: this.state.content,
+    }
+    this.props.addNote(note)
+  }
 
   render() {
     return (
       <div>
-        <h2>Add new note</h2>
+        <h2>Add new url</h2>
         <Form>
           <Form.Group controlId="contentId">
-            <Form.Label>Note</Form.Label>
+            <Form.Label>Url</Form.Label>
             <Form.Control
               as="textarea"
               rows={3}
               name="content"
-              placeholder="Enter note"
+              placeholder="Enter url"
               value={this.content}
               onChange={this.onChange}
             />
@@ -44,14 +44,14 @@ class AddNote extends Component {
           Add note
         </Button>
       </div>
-    );
+    )
   }
 }
 
 AddNote.propTypes = {
-  addNote: PropTypes.func.isRequired
-};
+  addNote: PropTypes.func.isRequired,
+}
 
-const mapStateToProps = state => ({});
+const mapStateToProps = (state) => ({})
 
-export default connect(mapStateToProps, { addNote })(withRouter(AddNote));
+export default connect(mapStateToProps, { addNote })(withRouter(AddNote))
