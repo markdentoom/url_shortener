@@ -35,3 +35,40 @@
 7. Account wide url where 10% of requests redirect to
 8. Custom shortened url
 9. IP-based request counter
+
+## How to run
+
+Requirements: Python, npm
+
+First navigate to the project directory, then
+create a virtual environment and activate it:
+
+`python -m venv venv`
+
+`source venv/bin/activate` on mac/ linux or `venv\Scripts\activate.bat` on windows
+
+Install python requirements:
+
+`pip install -r backend/requirements.txt`
+
+Create a sqlite database and apply migrations:
+
+`python backend/server/manage.py migrate`
+
+Run the backend:
+
+`python backend/server/manage.py runserver`
+
+Open up a new terminal, navigate to the frontend folder, and install the frontend dependencies:
+
+`cd frontend`
+
+`npm i --force`
+
+Start the frontend server:
+
+`npm start`
+
+Congratulations! You should now be able to view the site on http://localhost:3000/
+
+When you create an account you are prompted to activate your email before being able to log in. This email doesn't actually go to your inbox, instead you can find the activation link in the terminal where you're running the backend server. It should look something like `http://localhost:3000/activate/MQ/c3ho5x-7f97d440`. Heads-up: the first activation link gave me an error, but after trying to login you will be able to request a second one which should work.
