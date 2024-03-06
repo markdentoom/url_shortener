@@ -23,3 +23,15 @@
 - As a customer I want to see the unique number (on IP basis) of times the url is requested
 - As a customer I want, for evil purposes, to be able to enter an account wide url where 10% of all requests are redirected.
 - As a customer I want to be able to specify a custom shortened url (with availability check)
+
+## Approach I'm taking
+
+1. Grab a TODO app boilerplate with login to start off quickly
+2. Write out documentation on how to run it
+3. Remove the parts I won't need
+4. Create an input field for long urls and a button that shortens, saves, and displays the result
+5. Ensure the list of shortened urls can't be viewed when logged out
+6. Request counter
+7. Account wide url where 10% of requests redirect to
+8. Custom shortened url
+9. IP-based request counter
