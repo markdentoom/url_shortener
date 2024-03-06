@@ -31,6 +31,8 @@ class Note extends Component {
         <br />
         short url: <a href={note.short_url}>{note.short_url}</a>
         <br />
+        request count: {note.request_count}
+        <br />
         <Button variant="danger" size="sm" onClick={this.onDeleteClick}>
           Delete
         </Button>

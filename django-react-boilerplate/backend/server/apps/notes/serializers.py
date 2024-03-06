@@ -17,4 +17,4 @@ class NoteSerializer(serializers.ModelSerializer):
             "created_at",
             "created_by",
         )
-        fields = ("id", "created_at", "created_by", "content", "short_url")
+        fields = ("id", "created_at", "created_by", "content", "short_url", "request_count")

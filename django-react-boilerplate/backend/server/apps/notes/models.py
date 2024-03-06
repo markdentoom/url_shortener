@@ -9,3 +9,4 @@ class Note(models.Model):
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField(blank=True)
     short_url = models.TextField(blank=True)
+    request_count = models.IntegerField(default=1)
