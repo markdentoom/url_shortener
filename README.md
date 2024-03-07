@@ -72,3 +72,9 @@ Start the frontend server:
 Congratulations! You should now be able to view the site on http://localhost:3000/
 
 When you create an account you are prompted to activate your email before being able to log in. This email doesn't actually go to your inbox, instead you can find the activation link in the terminal where you're running the backend server. It should look something like `http://localhost:3000/activate/MQ/c3ho5x-7f97d440`. Heads-up: the first activation link gave me an error, but after trying to login you will be able to request a second one which should work.
+
+## End of challenge
+
+I set an alarm for 60 minutes and after it went off I committed the code as it was. I was in the process of implementing the request counter, but I did not get to finish the frontend for it.
+
+In its current state things work as intended as long as you shorten a new url every time, but the state management will be wrong when you shorten one that you already shortened before until you refresh the page.
